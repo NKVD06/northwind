@@ -1,0 +1,1 @@
+SELECT customers.region, COALESCE(SUM(orders.sales), 0) AS total_sales FROM customers LEFT JOIN orders ON customers.customer_id = orders.customer_id GROUP BY customers.region;

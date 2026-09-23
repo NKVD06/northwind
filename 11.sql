@@ -1,0 +1,1 @@
+SELECT customers.region,SUM(orders.sales) AS total_sales,AVG(orders.discount) AS avg_discount,COUNT(orders.order_id) AS total_orders FROM customers INNER JOIN orders ON customers.customer_id = orders.customer_id GROUP BY customers.region;

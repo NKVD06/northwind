@@ -1,0 +1,1 @@
+SELECT products.product_name,COALESCE(SUM(orders.sales), 0) AS total_sales FROM products LEFT JOIN orders ON products.product_id = orders.product_id GROUP BY products.product_id, products.product_name;

@@ -1,0 +1,1 @@
+SELECT products.category,AVG(orders.discount) AS avg_discount FROM products INNER JOIN orders ON products.product_id = orders.product_id GROUP BY products.category;
